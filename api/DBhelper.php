@@ -73,9 +73,8 @@ class DBhelper {
                 [ '$push'=> ['products' => $product]]);
 
         else
-            echo var_dump($idCart);
-            echo var_dump($product);
-            $cart_products->insertOne(['_id'=> '1', 'products'=>'7']);
+
+            $cart_products->insertOne(['_id'=> $idCart, 'products'=>[$product]]);
     }
 
     public function updateProdCart($idCart,$idPeod,$quantity){
