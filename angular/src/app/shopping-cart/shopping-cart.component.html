@@ -1,0 +1,38 @@
+<div class="spacer">
+    <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-9">
+            <div class="row shop-listing">
+              <table class="table shop-table">
+                <tr>
+                  <th class="b-0">Name</th>
+                  <th class="b-0">Price</th>
+                  <th class="b-0">Taxes</th>
+                  <th class="b-0">Quantity</th>
+                  <th class="b-0 text-right">Total Price</th>
+                </tr>
+                <tr *ngFor="let product of productList">
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.price }}</td>
+                  <td>{{product.taxes}}</td>
+                  <td>
+                    {{ product.quantity }}
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" [click]="deleteProdCart"> Sterge</button>
+                  </td>
+                  <td class="text-right">
+                    <h5 class="font-medium m-b-30">{{ product.quantity * product.price }}</h5>
+                  </td>
+                </tr>
+                <tr>                    
+                    <button class="btn btn-danger">Empty Cart</button>
+                    <td colspan="3">Total: {{ total }}</td>
+
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

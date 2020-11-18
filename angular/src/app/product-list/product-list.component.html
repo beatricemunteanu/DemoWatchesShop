@@ -1,0 +1,6 @@
+
+<button type="button" class="btn btn-sm btn-primary product-btn" [routerLink]="['/shopping-cart']"> Cart </button>
+
+<div class="col-md-4" *ngFor="let product of productList">
+  <app-product [productItem]="product"> </app-product>
+</div>
